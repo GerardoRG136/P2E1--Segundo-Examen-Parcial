@@ -1,0 +1,44 @@
+# Programa de pre diagnostico médico
+temperatura = float(input("Ingresa la temperatura del paciente en grados celsius: "))
+dias = float(input("Ingresa la cantidad de días que el paciente ha estado enfermo: "))
+print("Sintomas")
+print("1. tos")
+print("2. fatiga extrema")
+print("3. perdida de peso extrema")
+print("4. dolor de garganta")
+print("5. dificultad para respirar")
+sintomas = float(input("Sintomas que presenta el paciente ingresa número: "))
+
+#Fiebre:
+if temperatura <= 36.5:
+  print("No tiene fiebre")
+elif 36.5 > temperatura > 38:
+  print("Fiebre baja")
+elif temperatura >= 38:
+  print("Fiebre alta")
+
+
+#Enfermedad Crónica:
+if dias > 7:
+  print(".") 
+  if sintomas == 1:
+    print("Enfermedad crónica")
+  if sintomas == 2:
+    print("Enfermedad crónica")
+  if sintomas == 3:
+    print("Enfermedad crónica")
+
+
+#Infección Respiratoria:
+if 36<=temperatura<= 36.6:
+  print(".")
+  if sintomas == 1:
+    print("Infección respiratoria leve")
+elif 36.6< temperatura <= 38:
+  print(".")
+  if sintomas == 4:
+    print("Infección respiratoria media")
+elif temperatura> 38:
+  print(".")
+  if sintomas == 5:
+    print("Infección respiratoria grave")
